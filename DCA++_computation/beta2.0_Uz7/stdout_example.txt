@@ -1,0 +1,1450 @@
+
+********************************************************************************
+**********                        Git Version                         **********
+********************************************************************************
+
+Last commit:
+commit 0cbf06b89e13bece4fa1f6e98d9916467ba7d58c
+Author: Wei Wu <wu.wei.iop@gmail.com>
+Date:   Fri Dec 15 19:58:44 2023 +0800
+
+    change delta to dz orbital
+
+Working tree:
+
+
+********************************************************************************
+**********                          Modules                           **********
+********************************************************************************
+
+Currently Loaded Modulefiles:
+locate_module.c(591):ERROR:106: Magic cookie '#%Module' missing in '/usr/share/lmod/lmod/modulefiles/Core/slurm.lua'
+  1) slurm.lua
+  2) usl/1.0.1.lua
+  3) Szip/2.1.1-GCCcore-11.3.0.lua
+  4) HDF5/1.12.2-GCC-11.3.0-serial.lua
+  5) intel/compiler/2020.lua
+  6) GCCcore/12.3.0.lua
+  7) numactl/2.0.16-GCCcore-12.3.0.lua
+  8) libfabric/1.18.0-GCCcore-12.3.0.lua
+  9) intel/mkl/2020.lua
+ 10) intel/mpi/2020.lua
+ 11) dcapp/1.0.1.lua
+ 12) cmake/3.25.lua
+ 13) zlib/1.2.13-GCCcore-12.3.0.lua
+ 14) binutils/2.40-GCCcore-12.3.0.lua
+ 15) GCC/12.3.0.lua
+ 16) FFTW/3.3.10-GCC-12.3.0.lua
+
+
+********************************************************************************
+**********                       CMake Options                        **********
+********************************************************************************
+
+DCA_WITH_CUDA = OFF
+
+DCA_WITH_MPI = ON
+DCA_WITH_THREADED_SOLVER = ON
+
+DCA_CLUSTER_SOLVER = CT-AUX
+DCA_LATTICE = BLTO
+DCA_POINT_GROUP = D4
+DCA_MODEL = tight-binding
+DCA_RNG = std::mt19937_64
+DCA_PROFILER = None
+DCA_WITH_AUTOTUNING = OFF
+DCA_WITH_GNUPLOT = OFF
+DCA_WITH_SINGLE_PRECISION_TP_MEASUREMENTS = OFF
+DCA_WITH_MEMORY_SAVINGS = OFF
+DCA_WITH_MANAGED_MEMORY = OFF
+
+DCA_WITH_QMC_BIT = OFF
+
+
+********************************************************************************
+**********                     DCA(+) Calculation                     **********
+********************************************************************************
+
+Start time : 18-12-2023 09:38:50
+
+MPI-world set up: 96 processes.
+
+
+
+	opening file : input_sp.json
+
+
+	 Parsing completed! read 1941 characters and 83 lines.
+	 name        : CLUSTER MOMENTUM_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+	 name (dual) : CLUSTER REAL_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+
+	 size        : 4
+
+			MOMENTUM_SPACE			|	REAL_SPACE
+	 origin-index : 0				|	0
+	 volume       : 3.947842e+01			|	4.000000e+00
+
+	 basis : 
+			3.141593e+00	0.000000e+00	|	1.000000e+00	0.000000e+00	
+			-0.000000e+00	3.141593e+00	|	0.000000e+00	1.000000e+00	
+
+	 super-basis : 
+			6.283185e+00	0.000000e+00	|	2.000000e+00	0.000000e+00	
+			-0.000000e+00	6.283185e+00	|	0.000000e+00	2.000000e+00	
+
+	 inverse-basis : 
+			3.183099e-01	0.000000e+00	|	1.000000e+00	-0.000000e+00	
+			0.000000e+00	3.183099e-01	|	0.000000e+00	1.000000e+00	
+
+	 inverse-super-basis : 
+			1.591549e-01	0.000000e+00	|	5.000000e-01	-0.000000e+00	
+			0.000000e+00	1.591549e-01	|	0.000000e+00	5.000000e-01	
+
+
+	0	|	0.000000e+00	0.000000e+00		0.000000e+00	0.000000e+00	
+	1	|	0.000000e+00	3.141593e+00		0.000000e+00	1.000000e+00	
+	2	|	3.141593e+00	0.000000e+00		1.000000e+00	0.000000e+00	
+	3	|	3.141593e+00	3.141593e+00		1.000000e+00	1.000000e+00	
+
+
+	MOMENTUM_SPACE k-space symmetries : 
+
+	0, 0	|		0, 0	0, 0	0, 0	0, 0	0, 0	0, 0	0, 0	0, 0
+	0, 1	|		0, 1	0, 1	0, 1	0, 1	0, 1	0, 1	0, 1	0, 1
+	0, 2	|		0, 2	0, 2	0, 2	0, 2	0, 2	0, 2	0, 2	0, 2
+	0, 3	|		0, 3	0, 3	0, 3	0, 3	0, 3	0, 3	0, 3	0, 3
+	1, 0	|		1, 0	2, 0	1, 0	2, 0	1, 0	2, 0	1, 0	2, 0
+	1, 1	|		1, 1	2, 1	1, 1	2, 1	1, 1	2, 1	1, 1	2, 1
+	1, 2	|		1, 2	2, 2	1, 2	2, 2	1, 2	2, 2	1, 2	2, 2
+	1, 3	|		1, 3	2, 3	1, 3	2, 3	1, 3	2, 3	1, 3	2, 3
+	2, 0	|		2, 0	1, 0	2, 0	1, 0	2, 0	1, 0	2, 0	1, 0
+	2, 1	|		2, 1	1, 1	2, 1	1, 1	2, 1	1, 1	2, 1	1, 1
+	2, 2	|		2, 2	1, 2	2, 2	1, 2	2, 2	1, 2	2, 2	1, 2
+	2, 3	|		2, 3	1, 3	2, 3	1, 3	2, 3	1, 3	2, 3	1, 3
+	3, 0	|		3, 0	3, 0	3, 0	3, 0	3, 0	3, 0	3, 0	3, 0
+	3, 1	|		3, 1	3, 1	3, 1	3, 1	3, 1	3, 1	3, 1	3, 1
+	3, 2	|		3, 2	3, 2	3, 2	3, 2	3, 2	3, 2	3, 2	3, 2
+	3, 3	|		3, 3	3, 3	3, 3	3, 3	3, 3	3, 3	3, 3	3, 3
+
+
+
+	REAL_SPACE symmetries : 
+
+	0, 0	|		0, 0	0, 0	0, 0	0, 0	0, 0	0, 0	0, 0	0, 0
+	0, 1	|		0, 1	0, 1	0, 1	0, 1	0, 1	0, 1	0, 1	0, 1
+	0, 2	|		0, 2	0, 2	0, 2	0, 2	0, 2	0, 2	0, 2	0, 2
+	0, 3	|		0, 3	0, 3	0, 3	0, 3	0, 3	0, 3	0, 3	0, 3
+	1, 0	|		1, 0	2, 0	1, 0	2, 0	1, 0	2, 0	1, 0	2, 0
+	1, 1	|		1, 1	2, 1	1, 1	2, 1	1, 1	2, 1	1, 1	2, 1
+	1, 2	|		1, 2	2, 2	1, 2	2, 2	1, 2	2, 2	1, 2	2, 2
+	1, 3	|		1, 3	2, 3	1, 3	2, 3	1, 3	2, 3	1, 3	2, 3
+	2, 0	|		2, 0	1, 0	2, 0	1, 0	2, 0	1, 0	2, 0	1, 0
+	2, 1	|		2, 1	1, 1	2, 1	1, 1	2, 1	1, 1	2, 1	1, 1
+	2, 2	|		2, 2	1, 2	2, 2	1, 2	2, 2	1, 2	2, 2	1, 2
+	2, 3	|		2, 3	1, 3	2, 3	1, 3	2, 3	1, 3	2, 3	1, 3
+	3, 0	|		3, 0	3, 0	3, 0	3, 0	3, 0	3, 0	3, 0	3, 0
+	3, 1	|		3, 1	3, 1	3, 1	3, 1	3, 1	3, 1	3, 1	3, 1
+	3, 2	|		3, 2	3, 2	3, 2	3, 2	3, 2	3, 2	3, 2	3, 2
+	3, 3	|		3, 3	3, 3	3, 3	3, 3	3, 3	3, 3	3, 3	3, 3
+
+	 name        : LATTICE_SP MOMENTUM_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+	 name (dual) : LATTICE_SP REAL_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+
+	 size        : 800
+
+			MOMENTUM_SPACE			|	REAL_SPACE
+	 origin-index : 0				|	0
+	 volume       : 3.947842e+01			|	8.000000e+02
+
+	 basis : 
+			1.570796e-01	1.570796e-01	|	1.000000e+00	0.000000e+00	
+			1.570796e-01	-1.570796e-01	|	0.000000e+00	1.000000e+00	
+
+	 super-basis : 
+			6.283185e+00	0.000000e+00	|	2.000000e+01	2.000000e+01	
+			-0.000000e+00	6.283185e+00	|	2.000000e+01	-2.000000e+01	
+
+	 inverse-basis : 
+			3.183099e+00	3.183099e+00	|	1.000000e+00	-0.000000e+00	
+			3.183099e+00	-3.183099e+00	|	0.000000e+00	1.000000e+00	
+
+	 inverse-super-basis : 
+			1.591549e-01	0.000000e+00	|	2.500000e-02	2.500000e-02	
+			0.000000e+00	1.591549e-01	|	2.500000e-02	-2.500000e-02	
+
+
+	 name        : LATTICE_TP MOMENTUM_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+	 name (dual) : LATTICE_TP REAL_SPACE BRILLOUIN_ZONE (DIMENSION : 2)
+
+	 size        : 4
+
+			MOMENTUM_SPACE			|	REAL_SPACE
+	 origin-index : 0				|	0
+	 volume       : 3.947842e+01			|	4.000000e+00
+
+	 basis : 
+			3.141593e+00	0.000000e+00	|	1.000000e+00	0.000000e+00	
+			-0.000000e+00	3.141593e+00	|	0.000000e+00	1.000000e+00	
+
+	 super-basis : 
+			6.283185e+00	0.000000e+00	|	2.000000e+00	0.000000e+00	
+			-0.000000e+00	6.283185e+00	|	0.000000e+00	2.000000e+00	
+
+	 inverse-basis : 
+			3.183099e-01	0.000000e+00	|	1.000000e+00	-0.000000e+00	
+			0.000000e+00	3.183099e-01	|	0.000000e+00	1.000000e+00	
+
+	 inverse-super-basis : 
+			1.591549e-01	0.000000e+00	|	5.000000e-01	-0.000000e+00	
+			0.000000e+00	1.591549e-01	|	0.000000e+00	5.000000e-01	
+
+
+H_0 and H_int initialization start:    18-12-2023 09:39:18
+H_0 and H_int initialization end:      18-12-2023 09:39:18
+H_0 and H_int initialization duration: 8.590410e-04 s
+
+G_0 initialization start:    18-12-2023 09:39:18
+G_0 initialization end:      18-12-2023 09:39:18
+G_0 initialization duration: 2.811170e-04 s
+
+
+
+	 interpolation-matrices K initialization started ...  stopped ( 2.048000e-03 Mbytes) 
+
+
+
+	interpolation_sp is created 18-12-2023 09:39:21
+
+	 CT-AUX Integrator is born 
+
+
+
+	DcaLoop has started 	18-12-2023 09:39:26
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:26
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+0.000000e+00	3.141593e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+3.141593e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+3.141593e+00	3.141593e+00	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:26
+		 cluster-exclusion-step 18-12-2023 09:39:26
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 0)
+
+Threaded QMC integration has started: 18-12-2023 09:39:26
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 15	       N = 31	18-12-2023 09:39:26
+			            10 % completed	     <k> = 50	       N = 61	18-12-2023 09:39:26
+			            20 % completed	     <k> = 46	       N = 56	18-12-2023 09:39:27
+			            30 % completed	     <k> = 53	       N = 63	18-12-2023 09:39:27
+			            40 % completed	     <k> = 54	       N = 66	18-12-2023 09:39:27
+			            50 % completed	     <k> = 48	       N = 58	18-12-2023 09:39:27
+			            60 % completed	     <k> = 64	       N = 74	18-12-2023 09:39:28
+			            70 % completed	     <k> = 56	       N = 71	18-12-2023 09:39:28
+			            80 % completed	     <k> = 49	       N = 62	18-12-2023 09:39:28
+			            90 % completed	     <k> = 57	       N = 72	18-12-2023 09:39:28
+			             0 % completed	     <k> = 38	       N = 54	18-12-2023 09:39:29
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 53	       N = 66	18-12-2023 09:39:29
+			       19.9616 % completed	     <k> = 49	       N = 61	18-12-2023 09:39:29
+			       29.9424 % completed	     <k> = 41	       N = 46	18-12-2023 09:39:29
+			       39.9232 % completed	     <k> = 53	       N = 64	18-12-2023 09:39:29
+			        49.904 % completed	     <k> = 64	       N = 74	18-12-2023 09:39:29
+			       59.8848 % completed	     <k> = 50	       N = 60	18-12-2023 09:39:29
+			       69.8656 % completed	     <k> = 49	       N = 61	18-12-2023 09:39:29
+			       79.8464 % completed	     <k> = 47	       N = 63	18-12-2023 09:39:29
+			       89.8273 % completed	     <k> = 58	       N = 73	18-12-2023 09:39:29
+			       99.8081 % completed	     <k> = 52	       N = 66	18-12-2023 09:39:29
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.6599
+average number of delayed spins: 11.2601
+# creations / # annihilations: 1.00537
+
+Threaded on-node integration has ended: 18-12-2023 09:39:29
+
+Total number of measurements: 100000
+QMC-time	3.185351e+00
+
+		 Collect measurements 	18-12-2023 09:39:31
+
+			 QMC-local-time : 3.185351e+00 [sec]
+			 QMC-total-time : 3.638382e+02 [sec]
+			 Gflop   : 1.458238e+03 [Gf]
+			 Gflop/s   : 4.577951e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:31
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 2.405077e+00
+		 |Sigma_QMC - Sigma_cg|_2 ~ 2.388399e+00
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:31
+
+			 total-density : 4.113896e+00	 (time : 18-12-2023 09:39:31)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:31
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	-0.000000e+00	0.000000e+00	-0.000000e+00
+0.000000e+00	3.141593e+00	-2.081668e-17	-1.665335e-16	-2.081668e-17	-1.665335e-16
+3.141593e+00	0.000000e+00	-2.081668e-17	-1.665335e-16	-2.081668e-17	-1.665335e-16
+3.141593e+00	3.141593e+00	0.000000e+00	1.665335e-16	0.000000e+00	1.665335e-16
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:31
+		 cluster-exclusion-step 18-12-2023 09:39:31
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 1)
+
+Threaded QMC integration has started: 18-12-2023 09:39:31
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 53	       N = 69	18-12-2023 09:39:31
+			            10 % completed	     <k> = 40	       N = 53	18-12-2023 09:39:31
+			            20 % completed	     <k> = 44	       N = 57	18-12-2023 09:39:31
+			            30 % completed	     <k> = 65	       N = 77	18-12-2023 09:39:32
+			            40 % completed	     <k> = 56	       N = 70	18-12-2023 09:39:32
+			            50 % completed	     <k> = 50	       N = 57	18-12-2023 09:39:32
+			            60 % completed	     <k> = 78	       N = 92	18-12-2023 09:39:32
+			            70 % completed	     <k> = 52	       N = 66	18-12-2023 09:39:33
+			            80 % completed	     <k> = 54	       N = 68	18-12-2023 09:39:33
+			            90 % completed	     <k> = 42	       N = 49	18-12-2023 09:39:33
+			             0 % completed	     <k> = 51	       N = 67	18-12-2023 09:39:33
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 44	       N = 57	18-12-2023 09:39:33
+			       19.9616 % completed	     <k> = 56	       N = 57	18-12-2023 09:39:33
+			       29.9424 % completed	     <k> = 47	       N = 60	18-12-2023 09:39:34
+			       39.9232 % completed	     <k> = 46	       N = 61	18-12-2023 09:39:34
+			        49.904 % completed	     <k> = 50	       N = 62	18-12-2023 09:39:34
+			       59.8848 % completed	     <k> = 49	       N = 61	18-12-2023 09:39:34
+			       69.8656 % completed	     <k> = 65	       N = 71	18-12-2023 09:39:34
+			       79.8464 % completed	     <k> = 62	       N = 76	18-12-2023 09:39:34
+			       89.8273 % completed	     <k> = 46	       N = 58	18-12-2023 09:39:34
+			       99.8081 % completed	     <k> = 49	       N = 54	18-12-2023 09:39:34
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.6713
+average number of delayed spins: 11.3083
+# creations / # annihilations: 0.999882
+
+Threaded on-node integration has ended: 18-12-2023 09:39:34
+
+Total number of measurements: 100000
+QMC-time	3.267621e+00
+
+		 Collect measurements 	18-12-2023 09:39:35
+
+			 QMC-local-time : 3.267621e+00 [sec]
+			 QMC-total-time : 3.570710e+02 [sec]
+			 Gflop   : 1.471329e+03 [Gf]
+			 Gflop/s   : 4.502753e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:35
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 5.271093e-01
+		 |Sigma_QMC - Sigma_cg|_2 ~ 4.988099e-01
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:35
+
+			 total-density : 4.121828e+00	 (time : 18-12-2023 09:39:35)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:35
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	-0.000000e+00	0.000000e+00	-0.000000e+00
+0.000000e+00	3.141593e+00	-6.765422e-17	-3.747003e-16	-6.765422e-17	-3.747003e-16
+3.141593e+00	0.000000e+00	-6.765422e-17	-3.747003e-16	-6.765422e-17	-3.747003e-16
+3.141593e+00	3.141593e+00	3.330669e-16	2.081668e-16	3.330669e-16	2.081668e-16
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:35
+		 cluster-exclusion-step 18-12-2023 09:39:35
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 2)
+
+Threaded QMC integration has started: 18-12-2023 09:39:35
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 58	       N = 74	18-12-2023 09:39:35
+			            10 % completed	     <k> = 49	       N = 62	18-12-2023 09:39:36
+			            20 % completed	     <k> = 47	       N = 55	18-12-2023 09:39:36
+			            30 % completed	     <k> = 45	       N = 54	18-12-2023 09:39:36
+			            40 % completed	     <k> = 47	       N = 62	18-12-2023 09:39:36
+			            50 % completed	     <k> = 75	       N = 78	18-12-2023 09:39:37
+			            60 % completed	     <k> = 59	       N = 72	18-12-2023 09:39:37
+			            70 % completed	     <k> = 50	       N = 66	18-12-2023 09:39:37
+			            80 % completed	     <k> = 50	       N = 61	18-12-2023 09:39:37
+			            90 % completed	     <k> = 43	       N = 48	18-12-2023 09:39:38
+			             0 % completed	     <k> = 48	       N = 58	18-12-2023 09:39:38
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 56	       N = 69	18-12-2023 09:39:38
+			       19.9616 % completed	     <k> = 55	       N = 59	18-12-2023 09:39:38
+			       29.9424 % completed	     <k> = 69	       N = 74	18-12-2023 09:39:38
+			       39.9232 % completed	     <k> = 55	       N = 58	18-12-2023 09:39:38
+			        49.904 % completed	     <k> = 51	       N = 67	18-12-2023 09:39:38
+			       59.8848 % completed	     <k> = 55	       N = 68	18-12-2023 09:39:38
+			       69.8656 % completed	     <k> = 55	       N = 71	18-12-2023 09:39:38
+			       79.8464 % completed	     <k> = 47	       N = 53	18-12-2023 09:39:38
+			       89.8273 % completed	     <k> = 57	       N = 65	18-12-2023 09:39:39
+			       99.8081 % completed	     <k> = 51	       N = 64	18-12-2023 09:39:39
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 52.5154
+average number of delayed spins: 11.1594
+# creations / # annihilations: 1.01002
+
+Threaded on-node integration has ended: 18-12-2023 09:39:39
+
+Total number of measurements: 100000
+QMC-time	3.379403e+00
+
+		 Collect measurements 	18-12-2023 09:39:39
+
+			 QMC-local-time : 3.379403e+00 [sec]
+			 QMC-total-time : 3.581177e+02 [sec]
+			 Gflop   : 1.470298e+03 [Gf]
+			 Gflop/s   : 4.350763e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:39
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 1.325534e-01
+		 |Sigma_QMC - Sigma_cg|_2 ~ 1.180928e-01
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:39
+
+			 total-density : 4.124069e+00	 (time : 18-12-2023 09:39:39)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:39
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	1.665335e-16	0.000000e+00	1.665335e-16
+0.000000e+00	3.141593e+00	-5.854692e-17	-2.602085e-16	-5.854692e-17	-2.602085e-16
+3.141593e+00	0.000000e+00	-5.854692e-17	-2.602085e-16	-5.854692e-17	-2.602085e-16
+3.141593e+00	3.141593e+00	-2.498002e-16	5.204170e-17	-2.498002e-16	5.204170e-17
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:39
+		 cluster-exclusion-step 18-12-2023 09:39:40
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 3)
+
+Threaded QMC integration has started: 18-12-2023 09:39:40
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 50	       N = 66	18-12-2023 09:39:40
+			            10 % completed	     <k> = 67	       N = 80	18-12-2023 09:39:40
+			            20 % completed	     <k> = 53	       N = 66	18-12-2023 09:39:40
+			            30 % completed	     <k> = 67	       N = 79	18-12-2023 09:39:40
+			            40 % completed	     <k> = 43	       N = 53	18-12-2023 09:39:41
+			            50 % completed	     <k> = 46	       N = 59	18-12-2023 09:39:41
+			            60 % completed	     <k> = 50	       N = 64	18-12-2023 09:39:41
+			            70 % completed	     <k> = 45	       N = 54	18-12-2023 09:39:41
+			            80 % completed	     <k> = 41	       N = 51	18-12-2023 09:39:42
+			            90 % completed	     <k> = 43	       N = 52	18-12-2023 09:39:42
+
+		 warm-up ends
+
+			             0 % completed	     <k> = 58	       N = 68	18-12-2023 09:39:42
+			       9.98081 % completed	     <k> = 57	       N = 62	18-12-2023 09:39:42
+			       19.9616 % completed	     <k> = 40	       N = 52	18-12-2023 09:39:42
+			       29.9424 % completed	     <k> = 51	       N = 58	18-12-2023 09:39:42
+			       39.9232 % completed	     <k> = 54	       N = 65	18-12-2023 09:39:42
+			        49.904 % completed	     <k> = 38	       N = 52	18-12-2023 09:39:43
+			       59.8848 % completed	     <k> = 55	       N = 61	18-12-2023 09:39:43
+			       69.8656 % completed	     <k> = 59	       N = 75	18-12-2023 09:39:43
+			       79.8464 % completed	     <k> = 38	       N = 53	18-12-2023 09:39:43
+			       89.8273 % completed	     <k> = 46	       N = 59	18-12-2023 09:39:43
+			       99.8081 % completed	     <k> = 66	       N = 69	18-12-2023 09:39:43
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 50.5595
+average number of delayed spins: 11.1011
+# creations / # annihilations: 1.00007
+
+Threaded on-node integration has ended: 18-12-2023 09:39:43
+
+Total number of measurements: 100000
+QMC-time	3.332793e+00
+
+		 Collect measurements 	18-12-2023 09:39:44
+
+			 QMC-local-time : 3.332793e+00 [sec]
+			 QMC-total-time : 3.596833e+02 [sec]
+			 Gflop   : 1.473536e+03 [Gf]
+			 Gflop/s   : 4.421324e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:44
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 4.879071e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 2.949833e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:44
+
+			 total-density : 4.124013e+00	 (time : 18-12-2023 09:39:44)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:44
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	2.081668e-16	0.000000e+00	2.081668e-16
+0.000000e+00	3.141593e+00	-3.545341e-17	-3.981190e-16	-3.545341e-17	-3.981190e-16
+3.141593e+00	0.000000e+00	-3.545341e-17	-3.981190e-16	-3.545341e-17	-3.981190e-16
+3.141593e+00	3.141593e+00	-6.245005e-17	1.301043e-17	-6.245005e-17	1.301043e-17
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:44
+		 cluster-exclusion-step 18-12-2023 09:39:44
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 4)
+
+Threaded QMC integration has started: 18-12-2023 09:39:44
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 62	       N = 78	18-12-2023 09:39:44
+			            10 % completed	     <k> = 54	       N = 70	18-12-2023 09:39:44
+			            20 % completed	     <k> = 50	       N = 62	18-12-2023 09:39:45
+			            30 % completed	     <k> = 42	       N = 56	18-12-2023 09:39:45
+			            40 % completed	     <k> = 37	       N = 50	18-12-2023 09:39:45
+			            50 % completed	     <k> = 51	       N = 67	18-12-2023 09:39:45
+			            60 % completed	     <k> = 62	       N = 76	18-12-2023 09:39:46
+			            70 % completed	     <k> = 61	       N = 73	18-12-2023 09:39:46
+			            80 % completed	     <k> = 55	       N = 63	18-12-2023 09:39:46
+			            90 % completed	     <k> = 44	       N = 59	18-12-2023 09:39:46
+			             0 % completed	     <k> = 43	       N = 56	18-12-2023 09:39:47
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 60	       N = 74	18-12-2023 09:39:47
+			       19.9616 % completed	     <k> = 55	       N = 66	18-12-2023 09:39:47
+			       29.9424 % completed	     <k> = 41	       N = 54	18-12-2023 09:39:47
+			       39.9232 % completed	     <k> = 55	       N = 62	18-12-2023 09:39:47
+			        49.904 % completed	     <k> = 49	       N = 54	18-12-2023 09:39:47
+			       59.8848 % completed	     <k> = 48	       N = 48	18-12-2023 09:39:47
+			       69.8656 % completed	     <k> = 52	       N = 65	18-12-2023 09:39:47
+			       79.8464 % completed	     <k> = 45	       N = 60	18-12-2023 09:39:47
+			       89.8273 % completed	     <k> = 57	       N = 71	18-12-2023 09:39:47
+			       99.8081 % completed	     <k> = 67	       N = 80	18-12-2023 09:39:47
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.8009
+average number of delayed spins: 11.0642
+# creations / # annihilations: 1.01086
+
+Threaded on-node integration has ended: 18-12-2023 09:39:47
+
+Total number of measurements: 100000
+QMC-time	3.401862e+00
+
+		 Collect measurements 	18-12-2023 09:39:48
+
+			 QMC-local-time : 3.401862e+00 [sec]
+			 QMC-total-time : 3.586886e+02 [sec]
+			 Gflop   : 1.469116e+03 [Gf]
+			 Gflop/s   : 4.318564e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:48
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 7.559787e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 5.534546e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:48
+
+			 total-density : 4.124799e+00	 (time : 18-12-2023 09:39:48)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:48
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	5.204170e-17	0.000000e+00	5.204170e-17
+0.000000e+00	3.141593e+00	-5.049672e-17	-9.952976e-17	-5.049672e-17	-9.952976e-17
+3.141593e+00	0.000000e+00	-5.049672e-17	-9.952976e-17	-5.049672e-17	-9.952976e-17
+3.141593e+00	3.141593e+00	3.174544e-16	3.252607e-18	3.174544e-16	3.252607e-18
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:48
+		 cluster-exclusion-step 18-12-2023 09:39:49
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 5)
+
+Threaded QMC integration has started: 18-12-2023 09:39:49
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 48	       N = 63	18-12-2023 09:39:49
+			            10 % completed	     <k> = 54	       N = 68	18-12-2023 09:39:49
+			            20 % completed	     <k> = 51	       N = 64	18-12-2023 09:39:49
+			            30 % completed	     <k> = 60	       N = 65	18-12-2023 09:39:49
+			            40 % completed	     <k> = 32	       N = 44	18-12-2023 09:39:50
+			            50 % completed	     <k> = 49	       N = 61	18-12-2023 09:39:50
+			            60 % completed	     <k> = 54	       N = 70	18-12-2023 09:39:50
+			            70 % completed	     <k> = 58	       N = 66	18-12-2023 09:39:50
+			            80 % completed	     <k> = 54	       N = 64	18-12-2023 09:39:51
+			            90 % completed	     <k> = 56	       N = 70	18-12-2023 09:39:51
+			             0 % completed	     <k> = 45	       N = 56	18-12-2023 09:39:51
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 57	       N = 68	18-12-2023 09:39:51
+			       19.9616 % completed	     <k> = 52	       N = 67	18-12-2023 09:39:51
+			       29.9424 % completed	     <k> = 48	       N = 59	18-12-2023 09:39:51
+			       39.9232 % completed	     <k> = 46	       N = 60	18-12-2023 09:39:52
+			        49.904 % completed	     <k> = 41	       N = 53	18-12-2023 09:39:52
+			       59.8848 % completed	     <k> = 47	       N = 60	18-12-2023 09:39:52
+			       69.8656 % completed	     <k> = 64	       N = 69	18-12-2023 09:39:52
+			       79.8464 % completed	     <k> = 57	       N = 72	18-12-2023 09:39:52
+			       89.8273 % completed	     <k> = 45	       N = 61	18-12-2023 09:39:52
+			       99.8081 % completed	     <k> = 50	       N = 66	18-12-2023 09:39:52
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 52.7889
+average number of delayed spins: 10.8793
+# creations / # annihilations: 1
+
+Threaded on-node integration has ended: 18-12-2023 09:39:52
+
+Total number of measurements: 100000
+QMC-time	3.405468e+00
+
+		 Collect measurements 	18-12-2023 09:39:53
+
+			 QMC-local-time : 3.405468e+00 [sec]
+			 QMC-total-time : 3.587739e+02 [sec]
+			 Gflop   : 1.472963e+03 [Gf]
+			 Gflop/s   : 4.325289e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:53
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 2.011553e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 1.565071e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:53
+
+			 total-density : 4.124869e+00	 (time : 18-12-2023 09:39:53)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:53
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	1.301043e-17	0.000000e+00	1.301043e-17
+0.000000e+00	3.141593e+00	-3.344086e-17	-2.488244e-17	-3.344086e-17	-2.488244e-17
+3.141593e+00	0.000000e+00	-3.344086e-17	-2.488244e-17	-3.344086e-17	-2.488244e-17
+3.141593e+00	3.141593e+00	7.936360e-17	8.131516e-19	7.936360e-17	8.131516e-19
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:53
+		 cluster-exclusion-step 18-12-2023 09:39:53
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 6)
+
+Threaded QMC integration has started: 18-12-2023 09:39:53
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 47	       N = 63	18-12-2023 09:39:53
+			            10 % completed	     <k> = 65	       N = 72	18-12-2023 09:39:53
+			            20 % completed	     <k> = 55	       N = 67	18-12-2023 09:39:54
+			            30 % completed	     <k> = 58	       N = 68	18-12-2023 09:39:54
+			            40 % completed	     <k> = 49	       N = 65	18-12-2023 09:39:54
+			            50 % completed	     <k> = 52	       N = 61	18-12-2023 09:39:54
+			            60 % completed	     <k> = 47	       N = 59	18-12-2023 09:39:55
+			            70 % completed	     <k> = 45	       N = 56	18-12-2023 09:39:55
+			            80 % completed	     <k> = 53	       N = 67	18-12-2023 09:39:55
+			            90 % completed	     <k> = 45	       N = 51	18-12-2023 09:39:55
+			             0 % completed	     <k> = 54	       N = 70	18-12-2023 09:39:56
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 45	       N = 56	18-12-2023 09:39:56
+			       19.9616 % completed	     <k> = 55	       N = 67	18-12-2023 09:39:56
+			       29.9424 % completed	     <k> = 57	       N = 70	18-12-2023 09:39:56
+			       39.9232 % completed	     <k> = 56	       N = 70	18-12-2023 09:39:56
+			        49.904 % completed	     <k> = 55	       N = 65	18-12-2023 09:39:56
+			       59.8848 % completed	     <k> = 43	       N = 57	18-12-2023 09:39:56
+			       69.8656 % completed	     <k> = 54	       N = 58	18-12-2023 09:39:56
+			       79.8464 % completed	     <k> = 43	       N = 59	18-12-2023 09:39:56
+			       89.8273 % completed	     <k> = 53	       N = 65	18-12-2023 09:39:56
+			       99.8081 % completed	     <k> = 46	       N = 54	18-12-2023 09:39:56
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 50.5123
+average number of delayed spins: 11.122
+# creations / # annihilations: 0.998694
+
+Threaded on-node integration has ended: 18-12-2023 09:39:56
+
+Total number of measurements: 100000
+QMC-time	3.346843e+00
+
+		 Collect measurements 	18-12-2023 09:39:57
+
+			 QMC-local-time : 3.346843e+00 [sec]
+			 QMC-total-time : 3.586060e+02 [sec]
+			 Gflop   : 1.469463e+03 [Gf]
+			 Gflop/s   : 4.390596e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:39:57
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 5.014311e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 3.343463e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:39:57
+
+			 total-density : 4.124316e+00	 (time : 18-12-2023 09:39:57)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:39:57
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	1.697861e-16	0.000000e+00	1.697861e-16
+0.000000e+00	3.141593e+00	-6.040192e-17	-6.220610e-18	-6.040192e-17	-6.220610e-18
+3.141593e+00	0.000000e+00	-6.040192e-17	-6.220610e-18	-6.040192e-17	-6.220610e-18
+3.141593e+00	3.141593e+00	3.529078e-16	2.032879e-19	3.529078e-16	2.032879e-19
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:39:57
+		 cluster-exclusion-step 18-12-2023 09:39:57
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 7)
+
+Threaded QMC integration has started: 18-12-2023 09:39:57
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 58	       N = 73	18-12-2023 09:39:58
+			            10 % completed	     <k> = 46	       N = 61	18-12-2023 09:39:58
+			            20 % completed	     <k> = 63	       N = 78	18-12-2023 09:39:58
+			            30 % completed	     <k> = 53	       N = 67	18-12-2023 09:39:58
+			            40 % completed	     <k> = 53	       N = 66	18-12-2023 09:39:59
+			            50 % completed	     <k> = 50	       N = 66	18-12-2023 09:39:59
+			            60 % completed	     <k> = 54	       N = 67	18-12-2023 09:39:59
+			            70 % completed	     <k> = 49	       N = 61	18-12-2023 09:39:59
+			            80 % completed	     <k> = 54	       N = 62	18-12-2023 09:40:00
+			            90 % completed	     <k> = 45	       N = 56	18-12-2023 09:40:00
+			             0 % completed	     <k> = 46	       N = 57	18-12-2023 09:40:00
+			       9.98081 % completed	     <k> = 49	       N = 63	18-12-2023 09:40:00
+
+		 warm-up ends
+
+			       19.9616 % completed	     <k> = 50	       N = 65	18-12-2023 09:40:00
+			       29.9424 % completed	     <k> = 49	       N = 63	18-12-2023 09:40:00
+			       39.9232 % completed	     <k> = 60	       N = 67	18-12-2023 09:40:00
+			        49.904 % completed	     <k> = 56	       N = 69	18-12-2023 09:40:00
+			       59.8848 % completed	     <k> = 43	       N = 56	18-12-2023 09:40:01
+			       69.8656 % completed	     <k> = 56	       N = 62	18-12-2023 09:40:01
+			       79.8464 % completed	     <k> = 53	       N = 53	18-12-2023 09:40:01
+			       89.8273 % completed	     <k> = 35	       N = 45	18-12-2023 09:40:01
+			       99.8081 % completed	     <k> = 63	       N = 74	18-12-2023 09:40:01
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.0938
+average number of delayed spins: 11.2366
+# creations / # annihilations: 1.00302
+
+Threaded on-node integration has ended: 18-12-2023 09:40:01
+
+Total number of measurements: 100000
+QMC-time	3.388416e+00
+
+		 Collect measurements 	18-12-2023 09:40:02
+
+			 QMC-local-time : 3.388416e+00 [sec]
+			 QMC-total-time : 3.582663e+02 [sec]
+			 Gflop   : 1.470740e+03 [Gf]
+			 Gflop/s   : 4.340494e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:40:02
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 2.241941e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 1.337929e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:40:02
+
+			 total-density : 4.124485e+00	 (time : 18-12-2023 09:40:02)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:40:02
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	4.244652e-17	0.000000e+00	4.244652e-17
+0.000000e+00	3.141593e+00	2.653288e-17	3.315118e-16	2.653288e-17	3.315118e-16
+3.141593e+00	0.000000e+00	2.653288e-17	3.315118e-16	2.653288e-17	3.315118e-16
+3.141593e+00	3.141593e+00	4.212939e-16	1.665843e-16	4.212939e-16	1.665843e-16
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:40:02
+		 cluster-exclusion-step 18-12-2023 09:40:02
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 8)
+
+Threaded QMC integration has started: 18-12-2023 09:40:02
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 61	       N = 77	18-12-2023 09:40:02
+			            10 % completed	     <k> = 43	       N = 59	18-12-2023 09:40:02
+			            20 % completed	     <k> = 54	       N = 67	18-12-2023 09:40:03
+			            30 % completed	     <k> = 48	       N = 58	18-12-2023 09:40:03
+			            40 % completed	     <k> = 46	       N = 60	18-12-2023 09:40:03
+			            50 % completed	     <k> = 65	       N = 81	18-12-2023 09:40:03
+			            60 % completed	     <k> = 45	       N = 58	18-12-2023 09:40:04
+			            70 % completed	     <k> = 50	       N = 63	18-12-2023 09:40:04
+			            80 % completed	     <k> = 44	       N = 57	18-12-2023 09:40:04
+			            90 % completed	     <k> = 46	       N = 59	18-12-2023 09:40:04
+			             0 % completed	     <k> = 60	       N = 69	18-12-2023 09:40:05
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 53	       N = 69	18-12-2023 09:40:05
+			       19.9616 % completed	     <k> = 64	       N = 75	18-12-2023 09:40:05
+			       29.9424 % completed	     <k> = 46	       N = 60	18-12-2023 09:40:05
+			       39.9232 % completed	     <k> = 56	       N = 71	18-12-2023 09:40:05
+			        49.904 % completed	     <k> = 53	       N = 67	18-12-2023 09:40:05
+			       59.8848 % completed	     <k> = 57	       N = 62	18-12-2023 09:40:05
+			       69.8656 % completed	     <k> = 61	       N = 69	18-12-2023 09:40:05
+			       79.8464 % completed	     <k> = 57	       N = 72	18-12-2023 09:40:05
+			       89.8273 % completed	     <k> = 47	       N = 62	18-12-2023 09:40:05
+			       99.8081 % completed	     <k> = 53	       N = 64	18-12-2023 09:40:05
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 52.8291
+average number of delayed spins: 11.3658
+# creations / # annihilations: 1.00368
+
+Threaded on-node integration has ended: 18-12-2023 09:40:05
+
+Total number of measurements: 100000
+QMC-time	3.390437e+00
+
+		 Collect measurements 	18-12-2023 09:40:06
+
+			 QMC-local-time : 3.390437e+00 [sec]
+			 QMC-total-time : 3.585874e+02 [sec]
+			 Gflop   : 1.472504e+03 [Gf]
+			 Gflop/s   : 4.343110e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:40:06
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 2.672579e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 1.454617e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:40:06
+
+			 total-density : 4.124636e+00	 (time : 18-12-2023 09:40:06)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:40:06
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	-1.559218e-16	0.000000e+00	-1.559218e-16
+0.000000e+00	3.141593e+00	2.744990e-17	8.287794e-17	2.744990e-17	8.287794e-17
+3.141593e+00	0.000000e+00	2.744990e-17	8.287794e-17	2.744990e-17	8.287794e-17
+3.141593e+00	3.141593e+00	1.053235e-16	4.164607e-17	1.053235e-16	4.164607e-17
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:40:06
+		 cluster-exclusion-step 18-12-2023 09:40:06
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 9)
+
+Threaded QMC integration has started: 18-12-2023 09:40:07
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 54	       N = 69	18-12-2023 09:40:07
+			            10 % completed	     <k> = 46	       N = 56	18-12-2023 09:40:07
+			            20 % completed	     <k> = 60	       N = 70	18-12-2023 09:40:07
+			            30 % completed	     <k> = 61	       N = 74	18-12-2023 09:40:07
+			            40 % completed	     <k> = 46	       N = 60	18-12-2023 09:40:08
+			            50 % completed	     <k> = 53	       N = 63	18-12-2023 09:40:08
+			            60 % completed	     <k> = 36	       N = 51	18-12-2023 09:40:08
+			            70 % completed	     <k> = 48	       N = 61	18-12-2023 09:40:08
+			            80 % completed	     <k> = 52	       N = 63	18-12-2023 09:40:09
+			            90 % completed	     <k> = 55	       N = 65	18-12-2023 09:40:09
+			             0 % completed	     <k> = 46	       N = 56	18-12-2023 09:40:09
+
+		 warm-up ends
+
+			       9.98081 % completed	     <k> = 47	       N = 61	18-12-2023 09:40:09
+			       19.9616 % completed	     <k> = 55	       N = 60	18-12-2023 09:40:09
+			       29.9424 % completed	     <k> = 51	       N = 67	18-12-2023 09:40:09
+			       39.9232 % completed	     <k> = 57	       N = 73	18-12-2023 09:40:09
+			        49.904 % completed	     <k> = 47	       N = 59	18-12-2023 09:40:09
+			       59.8848 % completed	     <k> = 54	       N = 64	18-12-2023 09:40:10
+			       69.8656 % completed	     <k> = 75	       N = 89	18-12-2023 09:40:10
+			       79.8464 % completed	     <k> = 65	       N = 76	18-12-2023 09:40:10
+			       89.8273 % completed	     <k> = 47	       N = 56	18-12-2023 09:40:10
+			       99.8081 % completed	     <k> = 51	       N = 54	18-12-2023 09:40:10
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.0103
+average number of delayed spins: 11.1429
+# creations / # annihilations: 1.00476
+
+Threaded on-node integration has ended: 18-12-2023 09:40:10
+
+Total number of measurements: 100000
+QMC-time	3.294380e+00
+
+		 Collect measurements 	18-12-2023 09:40:11
+
+			 QMC-local-time : 3.294380e+00 [sec]
+			 QMC-total-time : 3.585541e+02 [sec]
+			 Gflop   : 1.470876e+03 [Gf]
+			 Gflop/s   : 4.464802e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:40:11
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 5.668990e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 4.194627e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:40:11
+
+			 total-density : 4.124406e+00	 (time : 18-12-2023 09:40:11)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:40:11
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	1.275530e-16	0.000000e+00	1.275530e-16
+0.000000e+00	3.141593e+00	6.862476e-18	2.071948e-17	6.862476e-18	2.071948e-17
+3.141593e+00	0.000000e+00	6.862476e-18	2.071948e-17	6.862476e-18	2.071948e-17
+3.141593e+00	3.141593e+00	2.633087e-17	1.041152e-17	2.633087e-17	1.041152e-17
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:40:11
+		 cluster-exclusion-step 18-12-2023 09:40:11
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 10)
+
+Threaded QMC integration has started: 18-12-2023 09:40:11
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 52	       N = 67	18-12-2023 09:40:11
+			            10 % completed	     <k> = 45	       N = 59	18-12-2023 09:40:11
+			            20 % completed	     <k> = 40	       N = 54	18-12-2023 09:40:12
+			            30 % completed	     <k> = 59	       N = 75	18-12-2023 09:40:12
+			            40 % completed	     <k> = 47	       N = 53	18-12-2023 09:40:12
+			            50 % completed	     <k> = 51	       N = 63	18-12-2023 09:40:12
+			            60 % completed	     <k> = 52	       N = 58	18-12-2023 09:40:13
+			            70 % completed	     <k> = 47	       N = 62	18-12-2023 09:40:13
+			            80 % completed	     <k> = 54	       N = 64	18-12-2023 09:40:13
+			            90 % completed	     <k> = 48	       N = 64	18-12-2023 09:40:13
+
+		 warm-up ends
+
+			             0 % completed	     <k> = 48	       N = 62	18-12-2023 09:40:14
+			       9.98081 % completed	     <k> = 53	       N = 65	18-12-2023 09:40:14
+			       19.9616 % completed	     <k> = 50	       N = 63	18-12-2023 09:40:14
+			       29.9424 % completed	     <k> = 47	       N = 57	18-12-2023 09:40:14
+			       39.9232 % completed	     <k> = 56	       N = 65	18-12-2023 09:40:14
+			        49.904 % completed	     <k> = 56	       N = 70	18-12-2023 09:40:14
+			       59.8848 % completed	     <k> = 42	       N = 52	18-12-2023 09:40:14
+			       69.8656 % completed	     <k> = 54	       N = 60	18-12-2023 09:40:14
+			       79.8464 % completed	     <k> = 51	       N = 66	18-12-2023 09:40:14
+			       89.8273 % completed	     <k> = 51	       N = 57	18-12-2023 09:40:14
+			       99.8081 % completed	     <k> = 55	       N = 68	18-12-2023 09:40:14
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 49.4762
+average number of delayed spins: 10.9431
+# creations / # annihilations: 0.986529
+
+Threaded on-node integration has ended: 18-12-2023 09:40:14
+
+Total number of measurements: 100000
+QMC-time	3.374233e+00
+
+		 Collect measurements 	18-12-2023 09:40:15
+
+			 QMC-local-time : 3.374233e+00 [sec]
+			 QMC-total-time : 3.594313e+02 [sec]
+			 Gflop   : 1.469133e+03 [Gf]
+			 Gflop/s   : 4.353976e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:40:15
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 7.356960e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 4.793851e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:40:15
+
+			 total-density : 4.124795e+00	 (time : 18-12-2023 09:40:15)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:40:15
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	3.188825e-17	0.000000e+00	3.188825e-17
+0.000000e+00	3.141593e+00	-2.950940e-17	-3.278870e-16	-2.950940e-17	-3.278870e-16
+3.141593e+00	0.000000e+00	-2.950940e-17	-3.278870e-16	-2.950940e-17	-3.278870e-16
+3.141593e+00	3.141593e+00	3.396496e-16	2.602879e-18	3.396496e-16	2.602879e-18
+
+
+
+		 coarsegrain-Greens-function 18-12-2023 09:40:15
+		 cluster-exclusion-step 18-12-2023 09:40:15
+
+	 CT-AUX Integrator has initialized (DCA-iteration : 11)
+
+Threaded QMC integration has started: 18-12-2023 09:40:15
+
+	 thread-id : 0  -->   (walker)
+	 thread-id : 1  -->   (accumulator)
+	 thread-id : 2  -->   (walker)
+	 thread-id : 3  -->   (accumulator)
+	 thread-id : 4  -->   (walker)
+	 thread-id : 5  -->   (accumulator)
+	 thread-id : 6  -->   (accumulator)
+	 thread-id : 7  -->   (accumulator)
+
+		 QMCI starts
+
+
+
+		CT-AUX walker test
+
+
+		 warm-up starts
+
+			             0 % completed	     <k> = 55	       N = 70	18-12-2023 09:40:16
+			            10 % completed	     <k> = 58	       N = 64	18-12-2023 09:40:16
+			            20 % completed	     <k> = 64	       N = 72	18-12-2023 09:40:16
+			            30 % completed	     <k> = 49	       N = 63	18-12-2023 09:40:16
+			            40 % completed	     <k> = 45	       N = 61	18-12-2023 09:40:17
+			            50 % completed	     <k> = 49	       N = 57	18-12-2023 09:40:17
+			            60 % completed	     <k> = 59	       N = 70	18-12-2023 09:40:17
+			            70 % completed	     <k> = 51	       N = 64	18-12-2023 09:40:17
+			            80 % completed	     <k> = 42	       N = 55	18-12-2023 09:40:18
+			            90 % completed	     <k> = 67	       N = 81	18-12-2023 09:40:18
+			             0 % completed	     <k> = 46	       N = 59	18-12-2023 09:40:18
+			       9.98081 % completed	     <k> = 53	       N = 66	18-12-2023 09:40:18
+
+		 warm-up ends
+
+			       19.9616 % completed	     <k> = 47	       N = 62	18-12-2023 09:40:18
+			       29.9424 % completed	     <k> = 46	       N = 54	18-12-2023 09:40:18
+			       39.9232 % completed	     <k> = 59	       N = 75	18-12-2023 09:40:18
+			        49.904 % completed	     <k> = 59	       N = 72	18-12-2023 09:40:19
+			       59.8848 % completed	     <k> = 60	       N = 76	18-12-2023 09:40:19
+			       69.8656 % completed	     <k> = 39	       N = 52	18-12-2023 09:40:19
+			       79.8464 % completed	     <k> = 49	       N = 63	18-12-2023 09:40:19
+			       89.8273 % completed	     <k> = 57	       N = 70	18-12-2023 09:40:19
+			       99.8081 % completed	     <k> = 54	       N = 65	18-12-2023 09:40:19
+
+		 QMCI ends
+
+
+Walker: process ID = 0, thread ID = 0
+-------------------------------------------
+estimate for sweep size: 51.8144
+average number of delayed spins: 11.1358
+# creations / # annihilations: 1.00863
+
+Threaded on-node integration has ended: 18-12-2023 09:40:19
+
+Total number of measurements: 100000
+QMC-time	3.389633e+00
+
+		 Collect measurements 	18-12-2023 09:40:20
+
+			 QMC-local-time : 3.389633e+00 [sec]
+			 QMC-total-time : 3.592493e+02 [sec]
+			 Gflop   : 1.471258e+03 [Gf]
+			 Gflop/s   : 4.340465e+02 [Gf/s]
+			 sign     : 1 
+
+		 symmetrize measurements has started 	18-12-2023 09:40:20
+
+
+		 |Sigma_QMC - Sigma_cg|_infty ~ 6.175507e-02
+		 |Sigma_QMC - Sigma_cg|_2 ~ 5.707085e-02
+
+
+
+	 CT-AUX Integrator has finalized 
+
+
+		 lattice-mapping 18-12-2023 09:40:20
+
+			 total-density : 4.124245e+00	 (time : 18-12-2023 09:40:20)
+
+
+		 coarsegrain-Selfenergy 18-12-2023 09:40:20
+
+        K-vectors             || Re[Sigma_QMC]   Im[Sigma_QMC]   Re[Sigma_cg]    Im[Sigma_cg] 
+----------------------------------------------------------------------------------------------
+0.000000e+00	0.000000e+00	0.000000e+00	7.972062e-18	0.000000e+00	7.972062e-18
+0.000000e+00	3.141593e+00	-3.860237e-17	-8.197176e-17	-3.860237e-17	-8.197176e-17
+3.141593e+00	0.000000e+00	-3.860237e-17	-8.197176e-17	-3.860237e-17	-8.197176e-17
+3.141593e+00	3.141593e+00	8.491241e-17	5.002511e-16	8.491241e-17	5.002511e-16
+
+
+
+Processor 0 is writing data.
+
+
+		 start writing ./dca_sp.hdf5	18-12-2023 09:40:20
+
+	 starts writing function : band-structure
+	 starts writing function : Sigma-r-DCA
+	 starts writing function : Self_Energy
+	 starts writing function : Self-Energy-n-1-iteration
+	 starts writing function : Self-Energy-n-0-iteration
+	 starts writing function : <k>
+	 starts writing function : Gflop_per_mpi_task
+	 starts writing function : times_per_mpi_task
+	 starts writing function : Gflops_per_mpi_task
+	 starts writing function : sign
+	 starts writing function : L2_Sigma_difference
+	 starts writing function : standard_deviation
+	 starts writing function : chemical-potential
+	 starts writing function : density
+	 starts writing function : expansion_order
+	 starts writing function : Sigma_zero_moment
+	 starts writing function : n_k
+	 starts writing function : A_k
+	 starts writing function : orbital-occupancies
+
+Finish time: 18-12-2023 09:40:20
+

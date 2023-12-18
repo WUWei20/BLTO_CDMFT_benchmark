@@ -1,0 +1,83 @@
+{
+    "output": {
+        "directory": "./",
+        "output-format": "HDF5",
+        "filename-dca": "dca_sp.hdf5",
+        "filename-profiling": "profiling.json",
+        "dump-lattice-self-energy": false,
+        "dump-cluster-Greens-functions": false,
+        "dump-Gamma-lattice": false,
+        "dump-chi-0-lattice": false
+    },
+
+    "physics": {
+        "beta": 4.0,
+        "density": 4.0,
+        "chemical-potential": 0.,
+        "adjust-chemical-potential": false
+    },
+
+    "BLTO-Hubbard-model": {
+        "txp": 0.15,
+        "tz": -0.25,
+        "tzp":-0.05,
+        "Vxz":0.5,
+        "t-perp":-0.8,
+        "delta":0.0,
+        "U": 3.0
+    },
+
+    "DCA": {
+        "initial-self-energy": "zero",
+        "iterations": 12,
+        "accuracy": 0.,
+        "self-energy-mixing-factor": 0.75,
+        "interacting-orbitals": [1,3],
+
+        "coarse-graining": {
+            "k-mesh-recursion": 0,
+            "periods": 0,
+            "quadrature-rule": 1,
+            "threads": 1,
+            "tail-frequencies": 0
+        }
+    },
+
+    "domains": {
+        "real-space-grids": {
+            "cluster": [[2, 0],
+                        [0, 2]],
+            "sp-host": [[20, 20],
+                        [20,-20]]
+        },
+
+        "imaginary-time": {
+            "sp-time-intervals": 256
+        },
+
+        "imaginary-frequency": {
+            "sp-fermionic-frequencies": 256
+        }
+    },
+
+    "Monte-Carlo-integration": {
+        "seed": 985456376,
+        "warm-up-sweeps": 2000,
+        "sweeps-per-measurement": 1.,
+        "measurements": 100000,
+
+        "threaded-solver": {
+            "walkers": 3,
+            "accumulators": 5
+        }
+    },
+
+    "CT-AUX": {
+        "expansion-parameter-K": 1.,
+        "initial-configuration-size": 16,
+        "initial-matrix-size": 32,
+        "max-submatrix-size": 32,
+        "neglect-Bennett-updates": false,
+        "additional-time-measurements": false
+    }
+}
